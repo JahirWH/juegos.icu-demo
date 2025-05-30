@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos.icu - Juegos Populares</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/">🎮 Juegos.icu</a>
+        </div>
+        <ul class="nav-links">
+            
+            <li><button class="filter-btn active" data-filter="all">Todos</button></li>
+            <li><button class="filter-btn" data-filter="popular">Más Populares</button></li>
+            <li><button class="filter-btn" data-filter="new">Más Nuevos</button></li>
+            <li><button class="filter-btn" data-filter="puzzle">Puzzle</button></li>
+            <li><button class="filter-btn" data-filter="racing">Carreras</button></li>
+            <li><button class="filter-btn" data-filter="adventure">Aventura</button></li>
+            <li><button class="filter-btn" data-filter="shooter">Acción</button></li>
+            <li><button class="filter-btn" data-filter="rpg">RPG</button></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="games-grid">
+            <% games.forEach((game, index) => { %>
+                <div class="game-card" data-category="<%= game.category %>" onclick="window.location.href='/game/<%= game.id %>'">
+                    <div class="game-image">
+                        <img src="<%= game.icon %>" alt="<%= game.title %>">
+                        <% if (game.type === 'popular') { %>
+                            <div class="badge popular">Popular</div>
+                        <% } else if (game.type === 'new') { %>
+                            <div class="badge new">Nuevo</div>
+                        <% } %>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title"><%= game.title %></div>
+                        <div class="game-category"><%= game.category %></div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Juegos Independientes</h1>
+        <div class="games-grid">
+            <% indepent.forEach((game, index) => { %>
+                <div class="game-card" data-category="<%= game.category %>" onclick="window.location.href='/independiente/<%= game.id %>'">
+                    <div class="game-image">
+                        <img src="<%= game.icon %>" alt="<%= game.title %>">
+                        <% if (game.type === 'popular') { %>
+                            <div class="badge popular">Popular</div>
+                        <% } else if (game.type === 'new') { %>
+                            <div class="badge new">Nuevo</div>
+                        <% } %>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title"><%= game.title %></div>
+                        <div class="game-category"><%= game.category %></div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+
+    <footer >
+        <p>&copy; 2025 Juegos.icu. Todos los derechos reservados. <a href="contact.html">Contacto</a> </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const gameCards = document.querySelectorAll('.game-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filter = button.getAttribute('data-filter');
+
+                    gameCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                        } else if (filter === 'popular' || filter === 'new') {
+                            const badge = card.querySelector('.badge');
+                            card.style.display = badge && badge.classList.contains(filter) ? 'block' : 'none';
+                        } else {
+                            const category = card.getAttribute('data-category').toLowerCase();
+                            card.style.display = category === filter ? 'block' : 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

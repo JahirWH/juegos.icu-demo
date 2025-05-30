@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "Puzzle Master",
+    "category": "puzzle",
+    "icon": "/img/demo.webp",
+    "type": "popular",
+    "description": "Un desafiante juego de puzzles con cientos de niveles. Conecta las piezas y resuelve los misterios ocultos.",
+    "content": "<div class=\"word-game\"><button class=\"start-building\">Comenzar</button></div>",
+    "author": "JaHWH"
+  },
+  {
+    "id": 2,
+    "title": "Word Builder",
+    "category": "puzzle",
+    "icon": "/img/demo.webp",
+    "type": "popular",
+    "description": "Crea palabras con las letras disponibles. Desbloquea niveles especiales con bonificaciones.",
+    "content": "<div class=\"word-game\"><button class=\"start-building\">Comenzar</button></div>",
+    "author": "JaHWH"
+  },
+  {
+    "id": 3,
+    "title": "Block Adventure",
+    "category": "puzzle",
+    "icon": "/img/demo.webp",
+    "type": "new",
+    "description": "Gira y acomoda bloques para completar el camino. ¡Cada nivel es un nuevo desafío!",
+    "content": "<div class=\"puzzle-game\"><button class=\"start-game\">Jugar</button></div>",
+    "author": "JaHWH"
+  },
+  {
+    "id": 4,
+    "title": "Color Match",
+    "category": "puzzle",
+    "icon": "/img/demo.webp",
+    "type": "popular",
+    "description": "Combina los colores antes de que se acabe el tiempo. Perfecto para ejercitar tu mente.",
+    "content": "<div class=\"color-game\"><button class=\"start-matching\">Comenzar</button></div>",
+    "author": "JaHWH"
+  },
+  {
+    "id": 5,
+    "title": "Sudoku Pro",
+    "category": "puzzle",
+    "icon": "/img/demo.webp",
+    "type": "new",
+    "description": "El clásico Sudoku con modos de dificultad ajustable. Ideal para amantes de los números.",
+    "content": "<div class=\"sudoku-game\"><button class=\"start-solving\">Jugar</button></div>",
+    "author": "JaHWH"
+  }
+]

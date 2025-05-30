@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Puzzle Master",
+    "category": "puzzle",
+    "icon": "/img/h/mario.webp",
+    "type": "popular",
+    "description": "Un desafiante juego de puzzles con cientos de niveles. Conecta las piezas y resuelve los misterios ocultos.",
+    "content": "<div class=\"adventure-game\"><h3>Fantasy Quest</h3><p>Crea tu personaje y comienza tu aventura.</p><button class=\"create-character\">Crear Personaje</button></div>",
+    "author": "JaHWH"
+  },
+  {
+    "id": 2,
+    "title": "Super mario",
+    "category": "adventure",
+    "icon": "/img/h/mario.webp",
+    "type": "new",
+    "description": "La carrera definitiva con los coches más rápidos. Compite contra otros jugadores en pistas emocionantes.",
+    "content": "<div class=\"adventure-game\"><h3>Fantasy Quest</h3><p>Crea tu personaje y comienza tu aventura.</p><button class=\"create-character\">Crear Personaje</button></div>",
+    "author": "JaHWH"
+  },
+
+  {
+    "id": 3,
+    "title": "Fantasy Quest",
+    "category": "adventure",
+    "icon": "/img/h/mario.webp",
+    "type": "popular",
+    "description": "Embárcate en una épica aventura en un mundo de fantasía lleno de dragones, magia y tesoros.",
+    "content": "<div class=\"adventure-game\"><h3>Fantasy Quest</h3><p>Crea tu personaje y comienza tu aventura.</p><button class=\"create-character\">Crear Personaje</button></div>",
+    "author": "JaHWH"
+
+  }
+]
